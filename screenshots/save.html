@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screenshot Saver</title>
+<style>body{font-family:monospace;padding:20px;}</style>
+</head>
+<body>
+<h2>Screenshot Saver</h2>
+<p id="status">Waiting for screenshot...</p>
+<input type="file" id="fileInput" accept="image/*" style="margin:10px 0;display:block">
+<button onclick="pickFolder()">Pick Save Folder</button>
+<div id="log"></div>
+<script>
+let saveDir = null;
+
+async function pickFolder() {
+  try {
+    saveDir = await window.showDirectoryPicker({ mode: 'readwrite' });
+    document.getElementById('status').textContent = 'Folder selected: ' + saveDir.name;
+    log('Folder selected: ' + saveDir.name);
+  } catch(e) {
+    log('Error picking folder: ' + e.message);
+  }
+}
+
+function log(msg) {
+  const d = document.getElementById('log');
+  d.innerHTML += '<div>' + new Date().toISOString().substring(11,19) + ' ' + msg + '</div>';
+}
+
+async function saveFile(filename, blob) {
+  if (!saveDir) {
+    // Fallback: regular download
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    a.click();
+    log('Downloaded (no folder): ' + filename);
+    return;
+  }
+  
+  try {
+    const handle = await saveDir.getFileHandle(filename, { create: true });
+    const writable = await handle.createWritable();
+    await writable.write(blob);
+    await writable.close();
+    log('Saved to folder: ' + filename + ' (' + blob.size + ' bytes)');
+    document.getElementById('status').textContent = 'Saved: ' + filename;
+  } catch(e) {
+    log('Error saving: ' + e.message);
+  }
+}
+
+// Listen for file input changes (used by upload_image tool)
+document.getElementById('fileInput').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  
+  const filename = window._pendingFilename || file.name;
+  log('Got file: ' + filename + ' (' + file.size + ' bytes)');
+  
+  await saveFile(filename, file);
+  
+  // Reset for next upload
+  e.target.value = '';
+  window._pendingFilename = null;
+});
+</script>
+</body>
+</html>

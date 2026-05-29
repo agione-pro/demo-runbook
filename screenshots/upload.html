@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Screenshot Upload</title></head>
+<body>
+<h3>Screenshot Receiver</h3>
+<input type="file" id="fileInput" accept="image/*" style="display:none">
+<div id="status">Ready</div>
+<script>
+// This page receives files uploaded to it and saves them as downloads
+const fileInput = document.getElementById('fileInput');
+window._uploadFile = function(filename) {
+  // This will be triggered by upload_image tool
+  // The file input change triggers saving
+  fileInput.onchange = function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(file);
+    a.download = filename;
+    a.click();
+    document.getElementById('status').textContent = 'Downloaded: ' + filename;
+  };
+};
+</script>
+</body>
+</html>

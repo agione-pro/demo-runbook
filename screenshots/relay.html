@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Screenshot Relay</title>
+<script>
+// When loaded from file://, we can POST to localhost
+// The Python server at localhost:7788 will receive and save the image
+
+window._saveScreenshot = async function(filename, base64data) {
+  try {
+    const response = await fetch('http://localhost:7788', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({filename: filename, image: base64data})
+    });
+    const result = await response.json();
+    document.getElementById('status').textContent = 'Saved: ' + filename + ' (' + result.ok + ')';
+    return result;
+  } catch(e) {
+    document.getElementById('status').textContent = 'Error: ' + e.message;
+    return {error: e.message};
+  }
+};
+
+// Auto-save if data is in URL hash
+window.onload = function() {
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#save:')) {
+    const parts = hash.substring(6).split('|');
+    const filename = decodeURIComponent(parts[0]);
+    const data = parts.slice(1).join('|');
+    window._saveScreenshot(filename, data).then(r => {
+      document.getElementById('status').textContent = JSON.stringify(r);
+    });
+  }
+  document.getElementById('status').textContent = 'Ready. Use window._saveScreenshot(filename, base64data)';
+};
+</script>
+</head>
+<body>
+<h3>Screenshot Relay Page</h3>
+<div id="status">Loading...</div>
+<p>This page relays screenshots from the browser to the sandbox Python server at localhost:7788</p>
+</body>
+</html>
