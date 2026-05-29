@@ -17,7 +17,7 @@ jobs:
         with:
           switches: -avzr --delete
           path: index.html
-          remote_path: ${{ vars.PREVIEW_DEPLOY_PATH }}
+          remote_path: ${{ vars.DEMO_RUNBOOK_DEPLOY_PATH }}
           remote_host: ${{ vars.DEPLOY_HOST }}
           remote_port: ${{ vars.DEPLOY_PORT }}
           remote_user: ${{ vars.DEPLOY_USER }}
