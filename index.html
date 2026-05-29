@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deployment Status</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: 420px;
+      padding: 40px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .status {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin-top: 16px;
+      color: #d1d5db;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .info {
+      margin-top: 28px;
+      padding: 14px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      text-align: left;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #e5e7eb;
+    }
+
+    .footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="status">
+      ✓
+    </div>
+
+    <h1>Deployment Complete</h1>
+
+    <p>
+      The latest version has been successfully deployed to the remote server.
+    </p>
+
+    <div class="info">
+      <div><strong>Branch:</strong> main</div>
+      <div><strong>Pipeline:</strong> GitHub Actions</div>
+      <div><strong>Status:</strong> Healthy</div>
+      <div><strong>Updated:</strong> Auto Sync Enabled</div>
+    </div>
+
+    <div class="footer">
+      Powered by CI/CD Automation
+    </div>
+  </div>
+</body>
+</html>
