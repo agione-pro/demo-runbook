@@ -146,6 +146,39 @@ const stepConfig = {
     navPath:     "My Calls → Overview",
     platformUrl: "https://demo.agione.pro",
     screenshot:  "screenshots/d3-eu3-calls.png"
+  },
+
+  // ── FAQ ──────────────────────────────────────────────────
+
+  "d4-operator": {
+    navPath:     null,
+    platformUrl: null,
+    screenshot:  null
+  },
+  "d4-highlevel": {
+    navPath:     null,
+    platformUrl: null,
+    screenshot:  null
+  },
+  "d4-provider": {
+    navPath:     null,
+    platformUrl: null,
+    screenshot:  null
+  },
+  "d4-enduser": {
+    navPath:     null,
+    platformUrl: null,
+    screenshot:  null
+  },
+  "d4-security": {
+    navPath:     null,
+    platformUrl: null,
+    screenshot:  null
+  },
+  "d4-service": {
+    navPath:     null,
+    platformUrl: null,
+    screenshot:  null
   }
 
 };

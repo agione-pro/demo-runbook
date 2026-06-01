@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AGIone Interactive Demo Runbook</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -22,7 +21,7 @@
   --muted:#7d8aa3;
   --subtle:#4a5568;
 }
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
+body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
   background-image:
     radial-gradient(ellipse 900px 500px at 5% -5%, rgba(34,211,238,0.07), transparent 60%),
     radial-gradient(ellipse 800px 600px at 95% 100%, rgba(99,102,241,0.08), transparent 60%);
@@ -95,6 +94,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .phase-op{background:rgba(34,211,238,0.12);color:#67e8f9;border:1px solid rgba(34,211,238,0.25);}
 .phase-pr{background:rgba(139,92,246,0.12);color:#c4b5fd;border:1px solid rgba(139,92,246,0.25);}
 .phase-eu{background:rgba(52,211,153,0.12);color:#6ee7b7;border:1px solid rgba(52,211,153,0.25);}
+.phase-fn{background:rgba(251,191,36,0.12);color:#fde68a;border:1px solid rgba(251,191,36,0.25);}
 
 /* ===== CONTENT ===== */
 .content{flex:1;padding:32px 36px;overflow-y:auto;height:100%;}
@@ -176,7 +176,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 }
 .code-dots{display:flex;gap:6px;}
 .code-dot{width:8px;height:8px;border-radius:50%;}
-.code-lang{font-size:11px;color:var(--muted);font-family:'Inter',sans-serif;}
+.code-lang{font-size:11px;color:var(--muted);font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei',Arial,sans-serif;}
 .code-block .kw{color:#818cf8;}
 .code-block .str{color:#6ee7b7;}
 .code-block .cm{color:#4a5568;}
@@ -191,6 +191,90 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .talk-item p{font-size:13px;color:#fde68a;line-height:1.6;}
 .talk-item strong{color:#fff;}
 
+/* ===== FAQ ===== */
+.faq-card{
+  background:linear-gradient(180deg,rgba(17,24,39,0.82),rgba(10,15,26,0.82));
+  border:1px solid rgba(80,110,160,0.24);
+  border-radius:16px;
+  padding:22px 24px;
+  margin:20px 0 24px;
+  position:relative;
+  overflow:hidden;
+}
+.faq-card::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--amber),var(--violet));
+}
+.faq-title{
+  display:flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:800;
+  text-transform:uppercase;letter-spacing:1px;
+  color:#e6edf7;margin-bottom:16px;
+}
+.faq-title::before{
+  content:"?";
+  width:22px;height:22px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(251,191,36,0.12);
+  border:1px solid rgba(251,191,36,0.35);
+  color:#fde68a;font-size:13px;font-weight:900;
+}
+.faq-list{display:grid;grid-template-columns:1fr;gap:14px;}
+.faq-item{
+  background:rgba(255,255,255,0.035);
+  border:1px solid rgba(255,255,255,0.07);
+  border-radius:12px;
+  padding:16px 18px;
+}
+.faq-head{
+  display:flex;align-items:flex-start;gap:8px;
+  margin-bottom:8px;
+}
+.faq-q{
+  flex:1;font-size:15px;font-weight:750;
+  color:var(--text);line-height:1.55;
+}
+.faq-a{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:10px;
+  font-size:14px;color:#a8b3c8;
+  line-height:1.75;
+  border-left:2px solid rgba(34,211,238,0.18);
+  padding-left:12px;
+  margin-top:8px;
+}
+.faq-a-label{
+  color:#67e8f9;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:0.4px;
+}
+.faq-a-body{
+  min-width:0;
+}
+.faq-a-body p{
+  margin:0;
+}
+.faq-a-body p + p{
+  margin-top:10px;
+}
+.faq-evidence{
+  margin-top:14px;
+  border:1px solid rgba(80,110,160,0.22);
+  border-radius:12px;
+  overflow:hidden;
+  background:rgba(6,10,18,0.55);
+}
+.faq-evidence img{
+  width:100%;
+  display:block;
+  max-height:320px;
+  object-fit:cover;
+  object-position:top;
+}
 /* ===== FEATURE GRID ===== */
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px;}
 .feature-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:16px;}
@@ -499,6 +583,17 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
   /* Presenter box */
   .presenter-box{padding:14px 16px;}
 
+  /* FAQ */
+  .faq-card{padding:16px 14px;margin:14px 0 18px;}
+  .faq-title{font-size:13px;margin-bottom:12px;}
+  .faq-item{padding:14px 13px;}
+  .faq-head{flex-direction:column;gap:6px;}
+  .faq-q{font-size:14px;line-height:1.55;}
+  .faq-a{font-size:13.5px;line-height:1.7;gap:8px;padding-left:10px;}
+  .faq-a-body p + p{margin-top:8px;}
+  .faq-evidence{margin-top:12px;border-radius:10px;}
+  .faq-evidence img{max-height:220px;}
+
   /* Screenshots */
   .screenshot-zone img{max-height:200px;}
 
@@ -539,6 +634,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
       <button class="demo-tab active" onclick="switchDemo(1)">Demo 1 · On-Prem Deploy &amp; Publish</button>
       <button class="demo-tab" onclick="switchDemo(2)">Demo 2 · Aggregate Publish</button>
       <button class="demo-tab" onclick="switchDemo(3)">Demo 3 · Public Model Publish</button>
+      <button class="demo-tab" onclick="switchDemo(4)">FAQ</button>
     </div>
     <div class="badge badge-live"><span class="live-dot"></span>demo.agione.pro</div>
   </div>
@@ -560,6 +656,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 <script src="content/demo1.js"></script>
 <script src="content/demo2.js"></script>
 <script src="content/demo3.js"></script>
+<script src="content/demo4.js"></script>
 
 <script>
 // ===== RENDER ENGINE =====
@@ -571,7 +668,8 @@ const phaseColors = {
   overview:{ dot:"#818cf8", badge:"phase-pr", border:"rgba(99,102,241,0.3)",  bg:"rgba(99,102,241,0.08)" },
   operator:{ dot:"#22d3ee", badge:"phase-op", border:"rgba(34,211,238,0.3)",  bg:"rgba(34,211,238,0.08)" },
   provider:{ dot:"#a78bfa", badge:"phase-pr", border:"rgba(139,92,246,0.3)",  bg:"rgba(139,92,246,0.08)" },
-  enduser: { dot:"#34d399", badge:"phase-eu", border:"rgba(52,211,153,0.3)",  bg:"rgba(52,211,153,0.08)" }
+  enduser: { dot:"#34d399", badge:"phase-eu", border:"rgba(52,211,153,0.3)",  bg:"rgba(52,211,153,0.08)" },
+  functions:{ dot:"#fbbf24", badge:"phase-fn", border:"rgba(251,191,36,0.3)", bg:"rgba(251,191,36,0.08)" }
 };
 
 const roleColors = {
@@ -602,15 +700,23 @@ function renderSidebar(){
   const demo = demos[currentDemo];
   let html = '';
   let lastPhase = null;
+  let lastGroup = null;
   demo.steps.forEach((step,i)=>{
-    if(step.phase !== lastPhase){
+    if(step.groupLabel){
+      if(step.groupLabel !== lastGroup){
+        if(lastGroup) html += '<div class="nav-divider"></div>';
+        const pc = phaseColors[step.phase];
+        html += `<div class="phase-label"><span class="phase-badge ${pc.badge}">${step.groupLabel}</span></div>`;
+        lastGroup = step.groupLabel;
+      }
+    } else if(step.phase !== lastPhase){
       if(lastPhase) html += '<div class="nav-divider"></div>';
       if(step.phase !== 'overview'){
         const pc = phaseColors[step.phase];
         html += `<div class="phase-label"><span class="phase-badge ${pc.badge}">${step.phaseLabel}</span></div>`;
       }
-      lastPhase = step.phase;
     }
+    lastPhase = step.phase;
     const isActive = i === currentStep;
     const isDone   = i < currentStep;
     const pc = phaseColors[step.phase];
@@ -688,12 +794,16 @@ function renderContent(){
 
   // ── Role tag ─────────────────────────────────────────────
   let roleHtml = '';
-  if(step.role){
+  if(step.role && step.phase !== 'functions'){
     roleHtml = `<div class="role-tag" style="background:${pc.bg};border:1px solid ${pc.border};color:${pc.dot}">
       <svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="currentColor" opacity="0.7"/></svg>
       ${step.role} Role
     </div>`;
   }
+
+  const subtitleHtml = step.subtitle
+    ? `<div class="step-subtitle">${step.subtitle}</div>`
+    : '';
 
   document.getElementById('content').innerHTML = `
     <div class="content-inner">
@@ -703,7 +813,7 @@ function renderContent(){
           <span class="step-num-tag">Step ${currentStep + 1} of ${total}</span>
         </div>
         <div class="step-title">${step.title}</div>
-        <div class="step-subtitle">${step.subtitle}</div>
+        ${subtitleHtml}
       </div>
       ${platformBarHtml}
       ${screenshotHtml}
