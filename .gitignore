@@ -8,6 +8,8 @@ desktop.ini
 .idea/
 *.swp
 *.swo
+.claude/
+.playwright-mcp/
 
 # Temp / build artifacts
 *.log
