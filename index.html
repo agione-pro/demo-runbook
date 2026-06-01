@@ -29,7 +29,7 @@
   --muted:#7d8aa3;
   --subtle:#4a5568;
 }
-body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;
   background-image:
     radial-gradient(ellipse 900px 500px at 5% -5%, rgba(34,211,238,0.07), transparent 60%),
     radial-gradient(ellipse 800px 600px at 95% 100%, rgba(99,102,241,0.08), transparent 60%);
@@ -50,7 +50,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
   box-shadow:0 0 24px rgba(56,189,248,0.4);flex:none;
 }
 .logo svg{width:22px;height:22px;}
-.brand-text h1{font-size:18px;font-weight:800;letter-spacing:-0.3px;}
+.brand-text h1{font-size:18px;font-weight:700;letter-spacing:-0.3px;}
 .brand-text h1 span{background:linear-gradient(135deg,#67e8f9,#818cf8);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .brand-text p{font-size:11px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin-top:1px;}
 .header-right{display:flex;align-items:center;gap:12px;}
@@ -113,7 +113,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
 .step-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
 .step-phase-tag{font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:0.8px;}
 .step-num-tag{font-size:11px;color:var(--muted);}
-.step-title{font-size:26px;font-weight:800;letter-spacing:-0.5px;line-height:1.2;margin-bottom:8px;}
+.step-title{font-size:26px;font-weight:700;letter-spacing:-0.5px;line-height:1.2;margin-bottom:8px;}
 .step-subtitle{font-size:14px;color:var(--muted);line-height:1.6;max-width:640px;}
 
 /* ===== CARDS ===== */
@@ -127,7 +127,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
 .card-violet::before{background:linear-gradient(90deg,var(--violet),var(--indigo));}
 .card-green::before{background:linear-gradient(90deg,var(--green),var(--cyan));}
 .card-amber::before{background:linear-gradient(90deg,var(--amber),#f97316);}
-.card-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.card-title{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
 .card-title svg{width:15px;height:15px;}
 
 /* ===== GRIDS ===== */
@@ -184,7 +184,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
 }
 .code-dots{display:flex;gap:6px;}
 .code-dot{width:8px;height:8px;border-radius:50%;}
-.code-lang{font-size:11px;color:var(--muted);font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei',Arial,sans-serif;}
+.code-lang{font-size:11px;color:var(--muted);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',Arial,sans-serif;}
 .code-block .kw{color:#818cf8;}
 .code-block .str{color:#6ee7b7;}
 .code-block .cm{color:#4a5568;}
@@ -217,7 +217,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
 }
 .faq-title{
   display:flex;align-items:center;gap:8px;
-  font-size:14px;font-weight:800;
+  font-size:13px;font-weight:600;
   text-transform:uppercase;letter-spacing:1px;
   color:#e6edf7;margin-bottom:16px;
 }
@@ -227,7 +227,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
   display:inline-flex;align-items:center;justify-content:center;
   background:rgba(251,191,36,0.12);
   border:1px solid rgba(251,191,36,0.35);
-  color:#fde68a;font-size:13px;font-weight:900;
+  color:#fde68a;font-size:12px;font-weight:700;
 }
 .faq-list{display:grid;grid-template-columns:1fr;gap:14px;}
 .faq-item{
@@ -241,7 +241,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
   margin-bottom:8px;
 }
 .faq-q{
-  flex:1;font-size:15px;font-weight:750;
+  flex:1;font-size:15px;font-weight:600;
   color:var(--text);line-height:1.55;
 }
 .faq-a{
@@ -255,9 +255,9 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
   margin-top:8px;
 }
 .faq-a-label{
-  color:#67e8f9;
+  color:#8ecfe0;
   font-size:13px;
-  font-weight:800;
+  font-weight:600;
   letter-spacing:0.4px;
 }
 .faq-a-body{
@@ -351,9 +351,9 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
 
 /* ===== MISC ===== */
 .overview-hero{background:linear-gradient(135deg,rgba(34,211,238,0.08),rgba(99,102,241,0.08));border:1px solid rgba(99,130,180,0.25);border-radius:18px;padding:28px 32px;margin-bottom:24px;}
-.overview-hero h2{font-size:22px;font-weight:800;margin-bottom:8px;}
+.overview-hero h2{font-size:22px;font-weight:700;margin-bottom:8px;}
 .overview-hero p{font-size:14px;color:var(--muted);line-height:1.7;max-width:600px;}
-.role-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:20px;}
+.role-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:20px;}
 .info-table{width:100%;border-collapse:collapse;font-size:13px;}
 .info-table td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.05);}
 .info-table td:first-child{color:var(--muted);width:40%;font-weight:500;}
@@ -593,7 +593,7 @@ body{font-family:'Avenir Next','Helvetica Neue',Helvetica,'PingFang SC','Microso
 
   /* FAQ */
   .faq-card{padding:16px 14px;margin:14px 0 18px;}
-  .faq-title{font-size:13px;margin-bottom:12px;}
+  .faq-title{font-size:13px;font-weight:600;margin-bottom:12px;}
   .faq-item{padding:14px 13px;}
   .faq-head{flex-direction:column;gap:6px;}
   .faq-q{font-size:14px;line-height:1.55;}
