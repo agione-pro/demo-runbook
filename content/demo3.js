@@ -1,4 +1,4 @@
-// AGIone Demo Runbook — Demo 3 content
+// AGIOne Demo Runbook — Demo 3 content
 // Edit step metadata in demos[3].steps[]
 // Edit step HTML in the Object.assign block below
 
@@ -18,7 +18,7 @@ demos[3] = {
       {
         id:"d3-pr1", phase:"provider", phaseLabel:"Provider", role:"Provider",
         title:"Login & Navigate to My Models",
-        subtitle:"Provider logs into AGIone and opens the model publish wizard.",
+        subtitle:"Provider logs into AGIOne and opens the model publish wizard.",
         content:"d3pr1"
       },
       {
@@ -66,7 +66,7 @@ overview3: ()=>`
     <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(251,191,36,0.2),rgba(99,102,241,0.2));border:1px solid rgba(251,191,36,0.35);display:flex;align-items:center;justify-content:center;font-size:26px;flex:none;">🏪</div>
     <div>
       <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:4px;">Demo Scenario · Model Provider</div>
-      <div style="font-size:17px;font-weight:800;color:var(--text);line-height:1.3;">"I have an API key for <span style="color:#fde68a;">Qwen / DeepSeek</span> — I want to publish it on AGIone so my users can call it directly, and I track every token."</div>
+      <div style="font-size:17px;font-weight:800;color:var(--text);line-height:1.3;">"I have an API key for <span style="color:#fde68a;">Qwen / DeepSeek</span> — I want to publish it on AGIOne so my users can call it directly, and I track every token."</div>
     </div>
   </div>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
@@ -83,7 +83,7 @@ overview3: ()=>`
     <div style="background:rgba(52,211,153,0.08);border:1px solid rgba(52,211,153,0.25);border-radius:12px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;">
       <div style="font-size:26px;">⚡</div>
       <div style="font-size:12px;font-weight:700;color:#6ee7b7;">No GPU Needed</div>
-      <div style="font-size:11px;color:var(--muted);line-height:1.4;">Just bring your API key — AGIone handles the rest</div>
+      <div style="font-size:11px;color:var(--muted);line-height:1.4;">Just bring your API key — AGIOne handles the rest</div>
     </div>
   </div>
 </div>
@@ -122,14 +122,14 @@ overview3: ()=>`
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path class="arch-arrow-path" d="M2 12h16" stroke="#34d399" stroke-width="1.8" stroke-linecap="round"/><path d="M14 8l4 4-4 4" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
     </div>
 
-    <!-- AGIone Platform -->
+    <!-- AGIOne Platform -->
     <div class="arch-col arch-col-2" style="background:linear-gradient(135deg,rgba(99,102,241,0.10),rgba(251,191,36,0.07));border:1px solid rgba(99,102,241,0.3);border-radius:12px;padding:14px;display:flex;flex-direction:column;position:relative;overflow:hidden;">
       <div class="arch-accent-indigo"></div>
       <div style="text-align:center;margin-bottom:14px;">
         <div style="width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#6366f1,#fbbf24);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;box-shadow:0 0 18px rgba(99,102,241,0.3);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.5" fill="#fff"/></svg>
         </div>
-        <div style="font-size:13px;font-weight:800;color:#a5b4fc;">AGIone Platform</div>
+        <div style="font-size:13px;font-weight:800;color:#a5b4fc;">AGIOne Platform</div>
         <div style="font-size:10px;color:var(--muted);margin-top:2px;">Model Proxy &amp; Billing</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:7px;flex:1;">
@@ -216,7 +216,7 @@ d3pr1: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"Unlike Demo 1, there is <strong>no deployment step</strong> here — the model already runs on Alibaba Cloud. We're just wrapping it with an AGIone service entry."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"Unlike Demo 1, there is <strong>no deployment step</strong> here — the model already runs on Alibaba Cloud. We're just wrapping it with an AGIOne service entry."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Choosing Public means any user on this platform can discover and call this model."</p></div>
   </div>
 </div>
@@ -225,7 +225,7 @@ d3pr1: ()=>`
 d3pr2: ()=>`
 <div class="card card-violet">
   <div class="card-title">Fill in Model Source Info</div>
-  <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px">Connect AGIone to the upstream model API. All fields come from the model provider (Alibaba Cloud in this demo).</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px">Connect AGIOne to the upstream model API. All fields come from the model provider (Alibaba Cloud in this demo).</p>
 </div>
 <div class="card" style="border-color:rgba(139,92,246,0.25);padding:18px 20px;">
   <div class="card-title" style="color:#c4b5fd;">Model Source Configuration</div>
@@ -252,7 +252,7 @@ d3pr2: ()=>`
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">2</div>
     <div class="step-body">
       <strong>Click "Test" to verify connectivity</strong>
-      <p>AGIone sends a test request to confirm the API address and key are working.</p>
+      <p>AGIOne sends a test request to confirm the API address and key are working.</p>
       <div class="step-note">
         <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" stroke="#fbbf24" stroke-width="1.8"/></svg>
         <span>If test fails, check the Request URL, API Key, and network before continuing.</span>
@@ -271,7 +271,7 @@ d3pr2: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"This is the key step — AGIone becomes a <strong>proxy between your users and the upstream model</strong>. Your API key never gets exposed to end users."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"This is the key step — AGIOne becomes a <strong>proxy between your users and the upstream model</strong>. Your API key never gets exposed to end users."</p></div>
     <div class="talk-item"><span class="talk-icon">🎯</span><p>Click "Test" live — a green checkmark is a strong visual confirmation the integration is working.</p></div>
   </div>
 </div>
@@ -311,7 +311,7 @@ d3pr3: ()=>`
   <div class="flow-row">
     <div class="flow-node">API Key + Source</div>
     <div class="flow-arrow">→</div>
-    <div class="flow-node">AGIone Proxy</div>
+    <div class="flow-node">AGIOne Proxy</div>
     <div class="flow-arrow">→</div>
     <div class="flow-node active-node">qwen3.6-plus · Public</div>
   </div>
@@ -320,7 +320,7 @@ d3pr3: ()=>`
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
     <div class="talk-item"><span class="talk-icon">💬</span><p>"The entire publish process took about <strong>3 minutes</strong>. The model is now live and billable — no infrastructure involved."</p></div>
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"Notice we set per-token pricing. AGIone automatically charges users and keeps a full audit trail — the Provider doesn't need to build any billing logic."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"Notice we set per-token pricing. AGIOne automatically charges users and keeps a full audit trail — the Provider doesn't need to build any billing logic."</p></div>
   </div>
 </div>
 `,
@@ -427,7 +427,7 @@ d3eu3: ()=>`
   <div class="talk-track">
     <div class="talk-item"><span class="talk-icon">🎉</span><p>"That's Demo 3 — a Provider brought in a cloud model with just an API key, published it publicly, and an End User was calling it in minutes."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Compared to Demo 1, there's <strong>no infrastructure to manage</strong>. Compared to Demo 2, there's <strong>no routing logic to configure</strong>. The simplest path from model to users."</p></div>
-    <div class="talk-item"><span class="talk-icon">🏁</span><p>"All three demos show the same End User experience — which is exactly the point. AGIone makes every model look the same to developers."</p></div>
+    <div class="talk-item"><span class="talk-icon">🏁</span><p>"All three demos show the same End User experience — which is exactly the point. AGIOne makes every model look the same to developers."</p></div>
   </div>
 </div>
 `,

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AGIone Interactive Demo Runbook — a zero-build, single-page web application that guides sales/pre-sales presenters through step-by-step demo scenarios on the AGIone platform. Internal use only (AGIone / OneProCloud).
+AGIOne Interactive Demo Runbook — a zero-build, single-page web application that guides sales/pre-sales presenters through step-by-step demo scenarios on the AGIOne platform. Internal use only (AGIOne / OneProCloud).
 
 **Live demo platform:** https://demo.agione.pro
 

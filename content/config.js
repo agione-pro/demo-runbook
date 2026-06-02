@@ -1,5 +1,5 @@
 // ============================================================
-// AGIone Demo Runbook — Step Configuration
+// AGIOne Demo Runbook — Step Configuration
 // ============================================================
 // Each key matches a step `id` from the demos[] metadata.
 //

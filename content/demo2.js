@@ -1,4 +1,4 @@
-// AGIone Demo Runbook — Demo 2 content
+// AGIOne Demo Runbook — Demo 2 content
 // Edit step metadata in demos[2].steps[]
 // Edit step HTML in the Object.assign block below
 
@@ -12,7 +12,7 @@ demos[2] = {
       {
         id:"d2-overview", phase:"overview", phaseLabel:"Overview", role:null,
         title:"Demo 2 · Aggregate Publish",
-        subtitle:"Showcase AGIone's Aggregate Model capability: combine multiple model instances into one intelligent routing endpoint.",
+        subtitle:"Showcase AGIOne's Aggregate Model capability: combine multiple model instances into one intelligent routing endpoint.",
         content:"overview2"
       },
       {
@@ -91,7 +91,7 @@ overview2: ()=>`
     <div style="background:rgba(139,92,246,0.08);border:1px solid rgba(139,92,246,0.25);border-radius:12px;padding:14px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;">
       <div style="font-size:26px;">🔌</div>
       <div style="font-size:12px;font-weight:700;color:#c4b5fd;">One Model to End Users</div>
-      <div style="font-size:11px;color:var(--muted);line-height:1.4;">Users call one address — AGIone picks the best model behind the scenes</div>
+      <div style="font-size:11px;color:var(--muted);line-height:1.4;">Users call one address — AGIOne picks the best model behind the scenes</div>
     </div>
   </div>
 </div>
@@ -138,14 +138,14 @@ overview2: ()=>`
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path class="arch-arrow-path" d="M2 12h16" stroke="#818cf8" stroke-width="1.8" stroke-linecap="round"/><path d="M14 8l4 4-4 4" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
     </div>
 
-    <!-- Col 2: AGIone Routing Engine -->
+    <!-- Col 2: AGIOne Routing Engine -->
     <div class="arch-col arch-col-2" style="background:linear-gradient(135deg,rgba(99,102,241,0.12),rgba(34,211,238,0.08));border:1px solid rgba(99,102,241,0.35);border-radius:12px;padding:14px;display:flex;flex-direction:column;position:relative;overflow:hidden;">
       <div class="arch-accent-indigo"></div>
       <div style="text-align:center;margin-bottom:14px;">
         <div style="width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#6366f1,#22d3ee);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;box-shadow:0 0 20px rgba(99,102,241,0.35);">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#fff" stroke-width="1.8"/><path d="M12 2v3m0 14v3m10-10h-3M5 12H2m15.5-7.5-2 2m-7 7-2 2m11 0-2-2m-7-7-2-2" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
-        <div style="font-size:13px;font-weight:800;color:#a5b4fc;">AGIone Router</div>
+        <div style="font-size:13px;font-weight:800;color:#a5b4fc;">AGIOne Router</div>
         <div style="font-size:10px;color:var(--muted);margin-top:2px;">Intelligent Routing Engine</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:7px;flex:1;">
@@ -298,7 +298,7 @@ d2pr2: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"I'm adding three variants of the same base model — high-speed, balanced, and full-quality. AGIone will route between them based on the strategy I set next."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"I'm adding three variants of the same base model — high-speed, balanced, and full-quality. AGIOne will route between them based on the strategy I set next."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Each instance has its own success rate threshold and concurrency limit — the router respects these boundaries automatically."</p></div>
   </div>
 </div>
@@ -307,7 +307,7 @@ d2pr2: ()=>`
 d2pr3: ()=>`
 <div class="card card-violet">
   <div class="card-title">Routing Strategy Configuration</div>
-  <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px">Define how AGIone routes requests across the aggregated model instances.</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px">Define how AGIOne routes requests across the aggregated model instances.</p>
 </div>
 <div class="feature-grid">
   <div class="feature-item" style="border-color:rgba(251,191,36,0.3);background:rgba(251,191,36,0.05)">
@@ -399,7 +399,7 @@ d2pr4: ()=>`
     <div class="flow-arrow">⊕</div>
     <div class="flow-node">qwen3-original</div>
     <div class="flow-arrow">→</div>
-    <div class="flow-node active-node">AGIone-Qwen3-HA</div>
+    <div class="flow-node active-node">AGIOne-Qwen3-HA</div>
   </div>
 </div>
 <div class="presenter-box">
@@ -422,7 +422,7 @@ d2eu1: ()=>`
   </div>
   <div class="step-item">
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">2</div>
-    <div class="step-body"><strong>Discover → Models</strong><p>Find the aggregate model "AGIone-Qwen3-HA" in the catalog. It looks identical to any other model entry.</p></div>
+    <div class="step-body"><strong>Discover → Models</strong><p>Find the aggregate model "AGIOne-Qwen3-HA" in the catalog. It looks identical to any other model entry.</p></div>
   </div>
   <div class="step-item">
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">3</div>
@@ -435,7 +435,7 @@ d2eu1: ()=>`
     <div>
       <div style="font-size:12px;font-weight:700;color:#6ee7b7;margin-bottom:10px">USER VIEW</div>
       <div style="font-size:13px;color:var(--text);line-height:1.7">
-        • One model: AGIone-Qwen3-HA<br>
+        • One model: AGIOne-Qwen3-HA<br>
         • One endpoint URL<br>
         • One API key<br>
         • Consistent latency & quality
@@ -476,7 +476,7 @@ client = OpenAI(
     api_key=<span class="str">"&lt;your-model-key&gt;"</span>
 )
 
-<span class="cm"># Same call — AGIone routes to best instance automatically</span>
+<span class="cm"># Same call — AGIOne routes to best instance automatically</span>
 response = client.chat.completions.create(
     model=<span class="str">"agione-qwen3-ha"</span>,
     messages=[{
@@ -641,7 +641,7 @@ d2eu3: ()=>`
   <div class="talk-track">
     <div class="talk-item"><span class="talk-icon">🎉</span><p>"That's Demo 2. The Provider created a <strong>high-availability aggregate model</strong> with intelligent cost routing — and the End User never needed to know."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Notice the routing dashboard: 68% of traffic went to the cheap instance, only 8% to the premium — <strong>automatic cost optimization</strong> with zero developer effort."</p></div>
-    <div class="talk-item"><span class="talk-icon">🏁</span><p>"Between Demo 1 and Demo 2, you've seen the full AGIone capability stack: on-prem infrastructure management, model lifecycle, and intelligent aggregation."</p></div>
+    <div class="talk-item"><span class="talk-icon">🏁</span><p>"Between Demo 1 and Demo 2, you've seen the full AGIOne capability stack: on-prem infrastructure management, model lifecycle, and intelligent aggregation."</p></div>
   </div>
 </div>
 `,

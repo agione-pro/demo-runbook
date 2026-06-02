@@ -1,4 +1,4 @@
-// AGIone Demo Runbook — Demo 1 content
+// AGIOne Demo Runbook — Demo 1 content
 // Edit step metadata in demos[1].steps[]
 // Edit step HTML in the Object.assign block below
 
@@ -18,7 +18,7 @@ demos[1] = {
       {
         id:"d1-op1", phase:"operator", phaseLabel:"Operator", role:"Operator",
         title:"Login & Platform Access",
-        subtitle:"Operator logs into AGIone platform to begin infrastructure management.",
+        subtitle:"Operator logs into AGIOne platform to begin infrastructure management.",
         content:"d1op1"
       },
       {
@@ -54,7 +54,7 @@ demos[1] = {
       {
         id:"d1-eu1", phase:"enduser", phaseLabel:"End User", role:"End User",
         title:"Access Unified Portal",
-        subtitle:"End user logs into AGIone and discovers published model services.",
+        subtitle:"End user logs into AGIOne and discovers published model services.",
         content:"d1eu1"
       },
       {
@@ -229,7 +229,7 @@ overview1: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Opening Talking Points</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">🎯</span><p>"Imagine you're a large bank — <strong>regulators won't let data touch a public cloud</strong>. Today I'll show how AGIone solves this from hardware to developer tools in three acts."</p></div>
+    <div class="talk-item"><span class="talk-icon">🎯</span><p>"Imagine you're a large bank — <strong>regulators won't let data touch a public cloud</strong>. Today I'll show how AGIOne solves this from hardware to developer tools in three acts."</p></div>
     <div class="talk-item"><span class="talk-icon">🏢</span><p>"The whole flow — Operator, Provider, End User — each gets <strong>exactly the control they need</strong>, nothing more, nothing less."</p></div>
     <div class="talk-item"><span class="talk-icon">⚡</span><p>"I'll shortcut the 10-min deployment wait and jump straight to a pre-deployed model — <strong>real config, real API</strong>."</p></div>
   </div>
@@ -265,7 +265,7 @@ d1op1: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"As the <strong>Operator</strong>, I'm the IT or infrastructure team responsible for bringing enterprise compute into AGIone."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"As the <strong>Operator</strong>, I'm the IT or infrastructure team responsible for bringing enterprise compute into AGIOne."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Notice the dashboard gives me an immediate health overview — I can see nodes, GPU utilization, and any alerts at a glance."</p></div>
   </div>
 </div>
@@ -274,7 +274,7 @@ d1op1: ()=>`
 d1op2: ()=>`
 <div class="card card-cyan">
   <div class="card-title">Onboard Nodes & Servers</div>
-  <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px">Register your enterprise bare-metal or virtual compute into the AGIone management plane using On-Premise mode.</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px">Register your enterprise bare-metal or virtual compute into the AGIOne management plane using On-Premise mode.</p>
   <div class="grid-2">
     <div class="metric-chip">
       <div class="metric-val" style="color:#22d3ee">128</div>
@@ -306,7 +306,7 @@ d1op2: ()=>`
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">3</div>
     <div class="step-body">
       <strong>Input server details & register</strong>
-      <p>Enter hostname / IP, SSH credentials or agent token. AGIone auto-discovers hardware specs.</p>
+      <p>Enter hostname / IP, SSH credentials or agent token. AGIOne auto-discovers hardware specs.</p>
     </div>
   </div>
   <div class="step-item">
@@ -322,7 +322,7 @@ d1op2: ()=>`
   <div class="grid-2">
     <div style="background:rgba(34,211,238,0.06);border:1px solid rgba(34,211,238,0.2);border-radius:10px;padding:14px">
       <div style="font-size:13px;font-weight:700;color:#67e8f9;margin-bottom:6px">☁ Cloud Mode</div>
-      <p style="font-size:12px;color:var(--muted);line-height:1.5">Managed cloud instances provisioned through AGIone. Pay-as-you-go, elastic scaling.</p>
+      <p style="font-size:12px;color:var(--muted);line-height:1.5">Managed cloud instances provisioned through AGIOne. Pay-as-you-go, elastic scaling.</p>
     </div>
     <div style="background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:14px">
       <div style="font-size:13px;font-weight:700;color:#a5b4fc;margin-bottom:6px">🏢 On-Premise Mode</div>
@@ -334,7 +334,7 @@ d1op2: ()=>`
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
     <div class="talk-item"><span class="talk-icon">💬</span><p>"I'm selecting <strong>On-Premise Mode</strong> because this customer has their own GPU cluster — their data cannot leave the building."</p></div>
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"AGIone's agent is deployed on the node and phones home securely — there's <strong>no inbound firewall rule</strong> needed."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"AGIOne's agent is deployed on the node and phones home securely — there's <strong>no inbound firewall rule</strong> needed."</p></div>
     <div class="talk-item"><span class="talk-icon">🎯</span><p>Point out the node health status grid — this is what the operations team sees 24/7.</p></div>
   </div>
 </div>
@@ -350,7 +350,7 @@ d1op3: ()=>`
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">2</div>
     <div class="step-body">
       <strong>Confirm NVIDIA & Ascend cards detected</strong>
-      <p>AGIone auto-identifies GPU model, VRAM, driver version and CUDA/CANN compatibility.</p>
+      <p>AGIOne auto-identifies GPU model, VRAM, driver version and CUDA/CANN compatibility.</p>
       <div class="tag-row">
         <span class="tag-chip" style="border-color:rgba(118,185,0,0.4);color:#a3e635;background:rgba(118,185,0,0.08)">NVIDIA A100 80G</span>
         <span class="tag-chip" style="border-color:rgba(255,95,95,0.4);color:#fca5a5;background:rgba(255,95,95,0.08)">Ascend 910B</span>
@@ -366,8 +366,8 @@ d1op3: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"A key differentiator: AGIone supports <strong>heterogeneous GPU backends</strong> — NVIDIA CUDA and Huawei Ascend CANN — from a single management plane."</p></div>
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"Many of our enterprise customers in China have Ascend cards due to export restrictions. AGIone abstracts that complexity away."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"A key differentiator: AGIOne supports <strong>heterogeneous GPU backends</strong> — NVIDIA CUDA and Huawei Ascend CANN — from a single management plane."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"Many of our enterprise customers in China have Ascend cards due to export restrictions. AGIOne abstracts that complexity away."</p></div>
   </div>
 </div>
 `,
@@ -407,7 +407,7 @@ d1op4: ()=>`
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
     <div class="talk-item"><span class="talk-icon">💬</span><p>"The Operator's job is done. We've created a <strong>Unified Resource Pool</strong> — now we hand off to the Provider to deploy models."</p></div>
-    <div class="talk-item"><span class="talk-icon">🎯</span><p>Emphasize: Provider never needs to know which physical server or GPU card is used — AGIone handles scheduling.</p></div>
+    <div class="talk-item"><span class="talk-icon">🎯</span><p>Emphasize: Provider never needs to know which physical server or GPU card is used — AGIOne handles scheduling.</p></div>
   </div>
 </div>
 `,
@@ -463,7 +463,7 @@ d1pr1: ()=>`
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"As a Provider, I don't configure servers manually. I just <strong>pick a model template</strong> — AGIone handles framework compatibility and GPU allocation."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"As a Provider, I don't configure servers manually. I just <strong>pick a model template</strong> — AGIOne handles framework compatibility and GPU allocation."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"We support all major open-source models out of the box. DeepSeek-R1 is a top choice for enterprise reasoning tasks."</p></div>
   </div>
 </div>
@@ -481,7 +481,7 @@ d1pr2: ()=>`
   </div>
   <div class="step-item">
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">2</div>
-    <div class="step-body"><strong>Choose GPU allocation & replica count</strong><p>AGIone shows available GPU capacity from the unified pool. Select number of GPU cards and replicas.</p></div>
+    <div class="step-body"><strong>Choose GPU allocation & replica count</strong><p>AGIOne shows available GPU capacity from the unified pool. Select number of GPU cards and replicas.</p></div>
   </div>
   <div class="step-item">
     <div class="step-circle" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--muted);">3</div>
@@ -723,7 +723,7 @@ d1eu1: ()=>`
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Notice the End User has <strong>no idea this model is running on-premise</strong>. They just see a model name, a description, and an API endpoint."</p></div>
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"This is the power of AGIone — the <strong>same user experience</strong> whether the model is on-prem, cloud, or from a third-party provider."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"This is the power of AGIOne — the <strong>same user experience</strong> whether the model is on-prem, cloud, or from a third-party provider."</p></div>
   </div>
 </div>
 `,
@@ -769,7 +769,7 @@ response = client.chat.completions.create(
 <div class="presenter-box">
   <div class="presenter-title"><svg viewBox="0 0 24 24" fill="none"><path d="M8 10h8M8 14h5M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8"/></svg>Presenter Notes</div>
   <div class="talk-track">
-    <div class="talk-item"><span class="talk-icon">💬</span><p>"The API is fully <strong>OpenAI-compatible</strong>. Existing integrations can point to AGIone with a one-line base URL change."</p></div>
+    <div class="talk-item"><span class="talk-icon">💬</span><p>"The API is fully <strong>OpenAI-compatible</strong>. Existing integrations can point to AGIOne with a one-line base URL change."</p></div>
     <div class="talk-item"><span class="talk-icon">💬</span><p>"Let me run this live in Codex so you can see the response in real time."</p></div>
     <div class="talk-item"><span class="talk-icon">🎯</span><p>Show the response in terminal. Point out latency — emphasize data never left the customer's datacenter.</p></div>
   </div>

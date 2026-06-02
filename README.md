@@ -1,10 +1,10 @@
-# AGIone Interactive Demo Runbook
+# AGIOne Interactive Demo Runbook
 
-An interactive, browser-based demo script for AGIone platform sales and pre-sales teams.
+An interactive, browser-based demo script for AGIOne platform sales and pre-sales teams.
 
 ## What is this?
 
-A single-page web application that guides presenters through three complete demo scenarios on the AGIone platform — step by step, with platform screenshots, live links, and presenter talking points at every stage.
+A single-page web application that guides presenters through three complete demo scenarios on the AGIOne platform — step by step, with platform screenshots, live links, and presenter talking points at every stage.
 
 ## Demo Scenarios
 
@@ -54,4 +54,4 @@ Replace the corresponding PNG in `screenshots/` — filenames are defined in `co
 
 ## License
 
-Internal use only — AGIone / OneProCloud.
+Internal use only — AGIOne / OneProCloud.
