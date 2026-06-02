@@ -221,13 +221,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
   text-transform:uppercase;letter-spacing:1px;
   color:#e6edf7;margin-bottom:16px;
 }
-.faq-title::before{
-  content:"?";
+.faq-title-icon{
   width:22px;height:22px;border-radius:50%;
   display:inline-flex;align-items:center;justify-content:center;
   background:rgba(251,191,36,0.12);
   border:1px solid rgba(251,191,36,0.35);
-  color:#fde68a;font-size:12px;font-weight:700;
+  color:#fde68a;font-size:14px;font-weight:700;
 }
 .faq-list{display:grid;grid-template-columns:1fr;gap:14px;}
 .faq-item{
@@ -282,6 +281,50 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
   max-height:320px;
   object-fit:cover;
   object-position:top;
+  cursor:zoom-in;
+}
+.screenshot-zone img{
+  cursor:zoom-in;
+}
+.image-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:rgba(3,7,18,0.82);
+  backdrop-filter:blur(10px);
+}
+.image-lightbox.open{
+  display:flex;
+}
+.image-lightbox img{
+  max-width:min(1180px,92vw);
+  max-height:86vh;
+  object-fit:contain;
+  border-radius:14px;
+  border:1px solid rgba(148,163,184,0.28);
+  box-shadow:0 24px 80px rgba(0,0,0,0.55);
+  background:#020617;
+}
+.image-lightbox-close{
+  position:absolute;
+  top:22px;
+  right:24px;
+  width:38px;
+  height:38px;
+  border-radius:999px;
+  border:1px solid rgba(148,163,184,0.32);
+  background:rgba(15,23,42,0.86);
+  color:#e5edf8;
+  font-size:24px;
+  line-height:1;
+  cursor:pointer;
+}
+.image-lightbox-close:hover{
+  background:rgba(30,41,59,0.95);
 }
 /* ===== FEATURE GRID ===== */
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px;}
@@ -830,6 +873,60 @@ function renderContent(){
       <div class="nav-buttons">${prevBtn}${nextBtn}</div>
     </div>`;
 }
+
+function ensureImageLightbox(){
+  let lightbox = document.getElementById('imageLightbox');
+  if(lightbox) return lightbox;
+
+  lightbox = document.createElement('div');
+  lightbox.id = 'imageLightbox';
+  lightbox.className = 'image-lightbox';
+  lightbox.innerHTML = `
+    <button class="image-lightbox-close" type="button" aria-label="Close image preview">&times;</button>
+    <img src="" alt="">
+  `;
+  document.body.appendChild(lightbox);
+  return lightbox;
+}
+
+function openImageLightbox(sourceImg){
+  const lightbox = ensureImageLightbox();
+  const previewImg = lightbox.querySelector('img');
+  previewImg.src = sourceImg.currentSrc || sourceImg.src;
+  previewImg.alt = sourceImg.alt || 'Preview image';
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImageLightbox(){
+  const lightbox = document.getElementById('imageLightbox');
+  if(!lightbox) return;
+
+  lightbox.classList.remove('open');
+  lightbox.querySelector('img').src = '';
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('click', event => {
+  const previewTarget = event.target.closest('.faq-evidence img, .screenshot-zone > img');
+  if(previewTarget){
+    openImageLightbox(previewTarget);
+    return;
+  }
+
+  const lightbox = event.target.closest('.image-lightbox');
+  if(!lightbox) return;
+
+  if(event.target === lightbox || event.target.closest('.image-lightbox-close')){
+    closeImageLightbox();
+  }
+});
+
+document.addEventListener('keydown', event => {
+  if(event.key === 'Escape'){
+    closeImageLightbox();
+  }
+});
 
 // ===== INIT =====
 render();
