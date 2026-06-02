@@ -42,17 +42,34 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
   background:rgba(7,11,20,0.9);backdrop-filter:blur(12px);
   position:sticky;top:0;z-index:100;
 }
-.brand{display:flex;align-items:center;gap:14px;}
-.logo{
-  width:40px;height:40px;border-radius:10px;
-  background:linear-gradient(135deg,#22d3ee,#3b82f6 55%,#6366f1);
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 24px rgba(56,189,248,0.4);flex:none;
+.brand{display:flex;align-items:flex-end;gap:16px;min-width:0;}
+.brand-logo{
+  height:30px;
+  width:auto;
+  display:block;
+  flex:none;
 }
-.logo svg{width:22px;height:22px;}
-.brand-text h1{font-size:18px;font-weight:700;letter-spacing:-0.3px;}
-.brand-text h1 span{background:linear-gradient(135deg,#67e8f9,#818cf8);-webkit-background-clip:text;background-clip:text;color:transparent;}
-.brand-text p{font-size:11px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin-top:1px;}
+.runbook-title{
+  position:relative;
+  padding-left:16px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  color:#dbe6f5;
+  white-space:nowrap;
+  line-height:1;
+  padding-bottom:2px;
+}
+.runbook-title::before{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:1px;
+  height:22px;
+  background:rgba(148,163,184,0.28);
+}
 .header-right{display:flex;align-items:center;gap:12px;}
 .badge{font-size:11px;padding:5px 12px;border-radius:999px;font-weight:600;border:1px solid;}
 .badge-live{background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.3);color:#6ee7b7;display:flex;align-items:center;gap:6px;}
@@ -519,8 +536,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
 
   /* Header */
   .header{padding:12px 16px;flex-wrap:wrap;gap:8px;}
-  .brand-text h1{font-size:15px;}
-  .brand-text p{display:none;}
+  .brand-logo{height:26px;}
+  .runbook-title{font-size:11px;letter-spacing:1px;padding-left:12px;padding-bottom:2px;}
+  .runbook-title::before{height:18px;bottom:-3px;}
   .header-right{width:100%;justify-content:space-between;}
   .demo-selector{flex:1;overflow-x:auto;scrollbar-width:none;}
   .demo-selector::-webkit-scrollbar{display:none;}
@@ -672,13 +690,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Micr
 <!-- HEADER -->
 <div class="header">
   <div class="brand">
-    <div class="logo">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v10l9 5 9-5V7l-9-5z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.5" fill="#fff"/></svg>
-    </div>
-    <div class="brand-text">
-      <h1><span>AGIOne</span> Platform</h1>
-      <p>Interactive Demo Runbook</p>
-    </div>
+    <img class="brand-logo" src="assets/logo-full-white.png" alt="AGIOne">
+    <div class="runbook-title">Demo Runbook</div>
   </div>
   <div class="header-right">
     <div class="demo-selector">
